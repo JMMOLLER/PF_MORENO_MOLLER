@@ -1,0 +1,379 @@
+@import url("https://db.onlinewebfonts.com/c/6dbb2ef49faa5474e0d891864e3a6c2b?family=BourgeoisW00-Medium");
+:root {
+    color-scheme: light dark; /* Evita que el modo oscuro del navegador cambie los colores */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    max-width: 100%;
+    min-width: 300px;
+}
+main {
+    margin-top: 50px;
+}
+
+/* ========= HEADER ========= */
+
+header {
+    font-size: 1.04rem;
+    font-family: "BourgeoisW00-Medium","Arial Regular",Arial,sans-serif;
+    text-transform: uppercase;
+    background-color: #000b28;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+h3 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-family: "BourgeoisW00-Medium","Arial Regular",Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: inherit;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1;
+    font-size: 1.31944rem;
+}
+.header-mobile {
+    display: none;
+}
+.content-header.header-desktop {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+li a{
+    text-decoration: none;
+    color: #ffffffd2;
+}
+.svg-icon {
+    fill: #ffffff;
+}
+a:hover .svg-icon {
+    fill: #019ff2;
+}
+/* LEFT CONTAINER */
+.leftContainer{
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+    width: 67%;
+}
+.leftContainer a {
+    height: 40px;
+}
+nav {
+    width: 490px;
+    height: 100%;
+    overflow: hidden;
+}
+.nav-list-container {
+    margin: 0 0 0 1rem;
+    height: 100%;
+    width: 400px;
+    display: table;
+    animation: nav-fadeIn-left 1s ease forwards;
+}
+.nav-li {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .9rem;
+    width: auto;
+}
+.nav-li a {
+    height: 25px;
+    text-decoration: none;
+}
+.border-cyan, .border-orange {
+    border-top: 3px solid #000b28;
+    border-bottom: 3px solid #000b28;
+}
+.border-cyan:hover {
+    border-bottom: 3px solid #00d8e6;
+}
+.border-orange:hover {
+    border-bottom: 3px solid #faa41a;
+}
+.nav-text:hover {
+    color: #ffffff;
+}
+/* END LEFT CONTAINER */
+
+
+/* RIGHT CONTAINER */
+.rightContainer {
+    width: 33%;
+}
+.icons-container-right {
+    animation: nav-fadeIn-right 1s ease forwards;
+}
+.right-list-container {
+    width: 273px;
+    list-style-type: none;
+    float: right;
+    display: flex;
+}
+.right-li {
+    width: 34px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+}
+.right-li.last-icon {
+    position: relative;
+    padding-right: 25px;
+    right: -15px;
+}
+.right-li.li-button {
+    position: relative;
+    width: 145px;
+    right: -15px;
+}
+.icon {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+}
+.play_button {
+    position: relative;
+    display: block;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    background-color: #faa41a;
+    background-image: linear-gradient(#faa41a,#f58220);
+    transform: skew(-30deg);
+    right: -15px;
+
+}
+.play_button p {
+    text-align: center;
+    padding: 15px 30px 0px 25px;
+    transform: skew(30deg);
+}
+
+@keyframes nav-fadeIn-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+@keyframes nav-fadeIn-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+/* ========= END HEADER ========= */
+
+/* ========= MAIN ========= */
+
+.main_section1 {
+    height: 2086px;
+    background-image: url("https://rocketleague.media.zestyio.com/rl_home_hero_s10mobile.S1xnzt8CAs.jpg?width=640&optimize=high");
+    background-size: 100% 100%;
+}
+.season_section1 {
+    height: 894.86px;
+}
+.season_section1 video {
+    width: 100%;
+}
+.rp_section1 {
+    height: 895.56px;
+}
+.rp_section1 video {
+    width: 100%;
+}
+
+/* ========= NEWS ========= */
+.news_main {
+    padding-top: 1vw;
+}
+.news_section1 {
+    width: 100%;
+}
+/* GRID SYSTEM */
+.grid-container {
+    padding: 5px 0.5vw 0 0.5vw;
+    max-width: 120rem;
+    min-height: 20cm;
+}
+.row {
+    margin: auto;
+    justify-content: center;
+}
+.col-sm-4 {
+    height: auto;
+    min-height: 233.05px;
+    width: auto;
+    min-width: 316.81px;
+    max-width: 569.59px;
+    padding: 0 .6944rem 0 .6944rem;
+    flex: auto;
+}
+.card-link {
+    display: block;
+    height: 100%;
+    padding-bottom: 5%;
+}
+.card {
+    border: 0;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+}
+.card img {
+    border-radius: 4px 4px 0 0;
+    height: 80%;
+}
+.card > .card_content {
+    height: 20%;
+    border-radius: 0 0 4px 4px;
+}
+.card_content {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 3% 2.5% .25%;
+}
+.bd-cyan {
+    border-top: .25vw solid #00d8e6;
+}
+.bd-blue {
+    border-top: .25vw solid #006cff;
+}
+.card_title {
+    text-align: center;
+    text-overflow: ellipsis;
+    height: 100%;
+}
+.card_title > h3 {
+    height: calc(100% - .5rem);
+    font-size: 22.5px;
+    line-height: 1.5;
+    color: #FFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+/* ========= END NEWS ========= */
+/* ========= DRIVE DAYS ========= */
+video {
+    width: 100%;
+}
+
+/* ========= MEDIA QUERIES =========*/
+@media screen and (max-width: 1119px) {
+    /* ========= HEADER ========= */
+    .content-header.header-desktop {
+        display: none;
+    }
+    .content-header.header-mobile {
+        display: flex;
+        height: 100%;
+        position: relative;
+    }
+    .image-logo {
+        padding-right: 10px;
+    }
+    .hamburguer {
+        width: 45px;
+        height: 5px;
+        border: 0;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+    .hamburguer::after, .hamburguer::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 45px;
+        height: 5px;
+        border: 0;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+    .hamburguer::after {
+        top: 12px;
+    }
+    .hamburguer::before {
+        bottom: 11px;
+    }
+    .hamburguer:focus {
+        animation: hamburguer-middle .3s ease .11s forwards;
+    }
+    .hamburguer:focus::after {
+        animation: hamburguer-bottom .3s ease .1s forwards;
+    }
+    .hamburguer:focus::before {
+        animation: hamburguer-top .1s ease forwards;
+    }
+    .right-list-container.mobile {
+        display: flex;
+        justify-content: end;
+    }
+    .play_button.mobile p {
+        padding: 15px 40px 0px 10px;
+    }
+}
+
+@media (min-width: 640px) {
+    .main_section1 {
+        background-image: url("../assets/img/bg_index.webp");
+    }
+}
+@keyframes hamburguer-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: .7;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+@keyframes hamburguer-middle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+        background-color: #919191;
+    }
+}
+@keyframes hamburguer-bottom {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 0px;
+        transform: rotate(-95deg);
+        background-color: #919191;
+    }
+}
