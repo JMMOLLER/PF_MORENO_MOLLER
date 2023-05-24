@@ -401,36 +401,31 @@ video {
         padding-right: 10px;
     }
     .hamburguer {
+        height: 30px;
         width: 45px;
-        height: 5px;
+        display: flex;
+        flex-direction: column;
         border: 0;
-        border-radius: 5px;
-        background-color: #ffffff;
+        background-color: transparent;
+        justify-content: space-around;
     }
-    .hamburguer::after, .hamburguer::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 45px;
+    .hamburguer > span {
+        width: 100%;
         height: 5px;
-        border: 0;
-        border-radius: 5px;
         background-color: #ffffff;
-    }
-    .hamburguer::after {
-        top: 12px;
-    }
-    .hamburguer::before {
-        bottom: 11px;
+        border-radius: 10px;
     }
     .hamburguer:focus {
-        animation: hamburguer-middle .3s ease .11s forwards;
+        outline: none;
     }
-    .hamburguer:focus::after {
-        animation: hamburguer-bottom .3s ease .1s forwards;
+    .hamburguer:focus > span:nth-child(1) {
+        animation: hamburguer-top .3s ease forwards;
     }
-    .hamburguer:focus::before {
-        animation: hamburguer-top .1s ease forwards;
+    .hamburguer:focus > span:nth-child(2) {
+        animation: hamburguer-middle .5s ease .13s forwards;
+    }
+    .hamburguer:focus > span:nth-child(3) {
+        animation: hamburguer-bottom .5s ease .13s forwards;
     }
     .right-list-container.mobile {
         display: flex;
@@ -462,8 +457,10 @@ video {
 @keyframes hamburguer-middle {
     0% {
         transform: rotate(0deg);
+        width: 45px;
     }
     100% {
+        width: 40px;
         transform: rotate(45deg);
         background-color: #919191;
     }
@@ -471,10 +468,12 @@ video {
 @keyframes hamburguer-bottom {
     0% {
         transform: rotate(0deg);
+        width: 45px;
     }
     100% {
         top: 0px;
-        transform: rotate(-95deg);
+        width: 40px;
+        transform: rotate(-43deg) translateY(-8px) translateX(6px);
         background-color: #919191;
     }
 }
