@@ -1,4 +1,5 @@
 @import url("https://db.onlinewebfonts.com/c/6dbb2ef49faa5474e0d891864e3a6c2b?family=BourgeoisW00-Medium");
+@import url("https://db.onlinewebfonts.com/c/a13e1f353caacf611618a30817536247?family=Bourgeois");
 :root {
     color-scheme: light dark; /* Evita que el modo oscuro del navegador cambie los colores */
 }
@@ -59,6 +60,11 @@ li a{
 }
 a:hover .svg-icon {
     fill: #019ff2;
+}
+.play_button:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-image: linear-gradient(#f58220,#faa41a);
 }
 /* LEFT CONTAINER */
 .leftContainer{
@@ -190,22 +196,117 @@ nav {
 
 /* ========= MAIN ========= */
 
-.main_section1 {
+.main_index {
     height: 2086px;
-    background-image: url("https://rocketleague.media.zestyio.com/rl_home_hero_s10mobile.S1xnzt8CAs.jpg?width=640&optimize=high");
+    background-image: url('https://rocketleague.media.zestyio.com/rl_home_hero_s10_desktop-half.S12MFUAAj.jpg?optimize=high');
     background-size: 100% 100%;
 }
-.season_section1 {
-    height: 894.86px;
+.main_section1 {
+    height: 100%;
+    padding-top: 43%;
 }
-.season_section1 video {
+.content_first+.second_content {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.content_first .col {
+    max-width: calc(100% / 2.19);
+}
+.second_content {
+    margin-top: 2.75% !important;
+}
+.second_content .col {
+    max-width: calc(100% / 3);
+}
+.content_first .card-link {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0 20px;
+    margin-bottom: 5%;
+    padding: 0;
+}
+.second_content .card-link {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0 5px;
+    margin-bottom: 5%;
+    padding: 0;
+}
+.content_first+.second_content .card-link .card {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.content_first .card-link:hover {
+    z-index: 100;
+    animation: addHover .3s ease forwards;
+}
+.content_first .card-link:not(:hover) {
+    animation: removeHover .3s ease forwards;
+}
+.second_content .card-link:hover {
+    z-index: 100;
+    animation: addHover .3s ease forwards;
+}
+.second_content .card-link:not(:hover) {
+    animation: removeHover .3s ease forwards;
+}
+.content_first .card_title > h3 {
+    font-size: 1.75vw;
+    line-height: 1.15;
+    white-space: normal;
+}
+.bd-orange {
+    border-top: .15vw solid #ff8a0c;
+}
+.button_container {
+    width: 277.516px;
+    height: 84.938px;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+.button_container > a {
+    border: 5px #006cff;
+}
+.btn_more_news {
+    cursor: pointer;
     width: 100%;
+    height: 100%;
+    border: 0;
+    font-family: "Bourgeois","Arial Regular",Arial,sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    line-height: 2.95;
+    background: url('https://rocketleague.media.zestyio.com/Button.png') no-repeat; 
+    background-size: contain;
 }
-.rp_section1 {
-    height: 895.56px;
+.btn_more_news:focus {
+    outline: none;
 }
-.rp_section1 video {
-    width: 100%;
+.btn_more_news:hover {
+    animation: addHover .3s ease forwards;
+}
+.btn_more_news:not(:hover) {
+    animation: removeHover .3s ease forwards;
+}
+
+@keyframes addHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@keyframes removeHover {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* ========= NEWS ========= */
@@ -341,7 +442,7 @@ video {
 }
 
 @media (min-width: 640px) {
-    .main_section1 {
+    .main_index {
         background-image: url("../assets/img/bg_index.webp");
     }
 }
