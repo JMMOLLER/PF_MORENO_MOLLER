@@ -15,19 +15,38 @@
     <header>
         <div class="content-header header-mobile">
             <!-- CONTENIDO IZQUIERDO -->
-            <div class="leftContainer">
+            <div class="leftContainer mobile">
                 <a class="image-logo" href="./index.html"><img src="./assets/img/text_logo.png" alt="text_logo"></a>
-                <button class="hamburguer" type="button" aria-label="menu">
+                <button class="hamburguer" id="hamburguer" type="button" aria-label="menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
             </div>
             <!-- CONTENIDO DERECHO -->
-            <div class="rightContainer">
+            <div class="rightContainer mobile">
                 <ul class="right-list-container mobile">
                     <li class="right-li li-button"><a class="play_button mobile" href="#"><p>play free!</p></a></li>
                 </ul>
+            </div>
+            <!-- CONTENIDO DEL MENU -->
+            <div class="content-nav-mobile">
+                <nav class="nav-mobile">
+                    <ul>
+                        <li><a href="./Pages/season.html">Season 10</a></li>
+                        <li><a href="./Pages/rocket_pass.html">Rocket Pass</a></li>
+                        <li><a href="./Pages/news.html">News</a></li>
+                        <li><a href="./Pages/drive_days.html">Drive Days</a></li>
+                    </ul>
+                </nav>
+                <div class="search-content">
+                    <input type="search" class="input-search-mobile" placeholder="Search">
+                    <a class="icon search">
+                        <svg id="search-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path class="svg-icon" d="M239,231.21a16.69,16.69,0,0,1-23.61,0l-51.54-51.55a92.09,92.09,0,1,1,22.34-24.87L239,207.6A16.69,16.69,0,0,1,239,231.21ZM108,46.74A60.22,60.22,0,1,0,168.17,107,60.22,60.22,0,0,0,108,46.74Z"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="content-header header-desktop">
@@ -81,6 +100,7 @@
     <main class="main_index">
         <section class="main_section1">
             <h2>MAIN</h2>
+                <!-- CONTENIDO DE LOS PRIMEROS 2 CARDS -->
                 <div class="content_first">
                     <div class="row">
                         <div class="col">
@@ -109,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- CONTENIDO DE LOS 3 CARDS DE ABAJO -->
                 <div class="second_content">
                     <div class="row">
                         <div class="col">
@@ -149,6 +169,7 @@
                             </a>
                         </div>
                     </div>
+                    <!-- BOTON QUE LLEVA A LA PAGINA DE NEWS -->
                     <div class="row">
                         <div class="button_container">
                             <a href="./Pages/news.html">
