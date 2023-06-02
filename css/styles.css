@@ -10,17 +10,13 @@
 }
 body, html {
     position: relative;
-    max-width: 100%;
     min-width: 300px;
     min-height: calc(100vh - 50px);
-}
-main {
-    margin-top: 50px;
 }
 footer {
     position: absolute;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     background-color: #2c2c2c;
     color: white;
     bottom: -150px;
@@ -36,11 +32,9 @@ header {
     font-family: "BourgeoisW00-Medium","Arial Regular",Arial,sans-serif;
     text-transform: uppercase;
     background-color: #000b28;
-    height: 50px;
-    width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 5;
 }
 h3 {
     text-transform: uppercase;
@@ -85,21 +79,18 @@ a:hover .svg-icon {
     display: flex;
     align-items: center;
     padding-left: .5rem;
-    width: 67%;
 }
 .leftContainer a {
     height: 40px;
 }
 nav {
-    width: 490px;
     height: 100%;
-    overflow: hidden;
 }
 .nav-list-container {
     margin: 0 0 0 1rem;
     height: 100%;
-    width: 400px;
     display: table;
+    list-style-type: none;
     animation: nav-fadeIn-left 1s ease forwards;
 }
 .nav-li {
@@ -130,9 +121,6 @@ nav {
 
 
 /* RIGHT CONTAINER */
-.rightContainer {
-    width: 33%;
-}
 .icons-container-right {
     animation: nav-fadeIn-right 1s ease forwards;
 }
@@ -141,6 +129,8 @@ nav {
     list-style-type: none;
     float: right;
     display: flex;
+    align-items: center;
+    margin-bottom: 0;
 }
 .right-li {
     width: 34px;
@@ -407,8 +397,7 @@ video {
     }
     .content-header.header-mobile {
         display: flex;
-        height: 100%;
-        position: relative;
+        justify-content: space-between;
     }
     /* NAV MOBILE */
     .content-nav-mobile {
@@ -507,15 +496,11 @@ video {
         justify-content: end;
         width: auto;
     }
-    .leftContainer.mobile {
-        width: auto;
-    }
-    .rightContainer.mobile {
-        position: absolute;
+    .right-li.li-button {
         right: 0;
     }
-    .play_button.mobile p {
-        padding: 15px 40px 0px 10px;
+    .leftContainer.mobile {
+        width: auto;
     }
 }
 
