@@ -1,0 +1,62 @@
+@import url("https://db.onlinewebfonts.com/c/6dbb2ef49faa5474e0d891864e3a6c2b?family=BourgeoisW00-Medium");
+@import url("https://db.onlinewebfonts.com/c/a13e1f353caacf611618a30817536247?family=Bourgeois");
+:root {
+    color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
+}
+/*================== VARIABLES ================*/
+$color-header: #000b28;
+$border-orange: 3px solid #faa41a;
+$border-cyan: 3px solid #00d8e6;
+$color-white: #ffffff;
+/*=============== END VARIABLES ===============*/
+
+/*=============== GLOBAL STYLES ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    min-width: 300px;
+    /* 
+    *  YA ME CANSÉ DE DARLE VUELTAS, 
+    *  NO SÉ PORQUE EL BODY NO ALCANZA EL 100%
+    *  DEL PADRE HTML.
+    */
+    min-height: 100vh; 
+}
+hr {
+    background-color: #808080;
+}
+P {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-family: "BourgeoisW00-Medium","Arial Regular",Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: inherit;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1;
+}
+.row {
+    margin: auto;
+    justify-content: center;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+
+/*=============== END GLOBAL STYLES ===============*/
+
+@import 'header_style';
+
+@import 'footer_style';
+
+@import 'card_style';
+
+@import 'index_style';
+
+@import 'news_style';

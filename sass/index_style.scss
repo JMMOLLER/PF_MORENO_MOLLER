@@ -1,0 +1,129 @@
+/* ========= MAIN ========= */
+
+.main_index {
+    min-height: 768px;
+    background-image: url('../assets/img/bg_index.webp');
+    background-size: cover;
+    background-position: top;
+    .main_section1 {
+        height: 100%;
+        padding-top: 43%;
+        .content_first{
+            max-width: 90%;
+            margin: 0 auto;
+            .col {
+                max-width: calc(100% / 2.19);
+                min-width: 500px;
+                .card-link {
+                    height: auto;
+                    width: auto;
+                    margin: 0 20px;
+                    margin-bottom: 5%;
+                    padding: 0;
+                    .card_title > p {
+                        line-height: 1.15;
+                        white-space: normal;
+                    }
+                }
+                @media screen and (max-width: 1119px) {
+                    min-width: 300px;
+                    .card-link {
+                        margin: 0;
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+        }
+        
+        .second_content {
+            max-width: 90%;
+            margin: 0 auto;
+            margin-top: 2.75%;
+            @media screen and (max-width: 1119px) {
+                max-width: 100%;
+                margin: 0;
+                margin-top: 3%;
+                .row {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                }
+            }
+            :first-child {
+                justify-content: unset;
+            }
+            .row {
+                flex-wrap: nowrap;
+                .col {
+                    max-width: calc(100% / 3);
+                    min-width: 300px;
+                    .card-link {
+                        position: relative;
+                        height: auto;
+                        width: auto;
+                        margin: 5% 5px;
+                        padding: 0;
+                    }
+                }
+            }
+            .button_container {
+                width: 277.516px;
+                height: 84.938px;
+                margin-top: 2%;
+                > a {
+                    display: block;
+                    height: 100%;
+                    .btn_more_news {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+                        border: 0;
+                        font-family: "Bourgeois","Arial Regular",Arial,sans-serif;
+                        font-weight: 600;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: calc(100% + 1vw);
+                        background: url('../assets/img/Button.webp') no-repeat; 
+                        background-size: contain;
+                    }
+                    .btn_more_news:focus {
+                        outline: none;
+                    }
+                    .btn_more_news:hover {
+                        animation: addHover .3s ease forwards;
+                    }
+                    .btn_more_news:not(:hover) {
+                        animation: removeHover .3s ease forwards;
+                    }
+                }
+            }
+        }
+
+        .card:hover {
+            z-index: 100;
+            animation: addHover .3s ease forwards;
+        }
+        .card:not(:hover) {
+            animation: removeHover .3s ease forwards;
+        }
+    }
+}
+
+@keyframes addHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@keyframes removeHover {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ========= END INDEX STYLES ========= */

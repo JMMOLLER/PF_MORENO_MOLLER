@@ -1,0 +1,51 @@
+/* ========= CARD STYLES ========= */
+$color-white: #ffffff;
+.card-link {
+    display: block;
+    height: 100%;
+    padding-bottom: 5%;
+}
+.card {
+    position: initial;
+    border: 0;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+}
+.card img {
+    border-radius: 4px 4px 0 0;
+    height: 80%;
+}
+.card > .card_content {
+    height: 20%;
+    border-radius: 0 0 4px 4px;
+}
+.card_content {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: $color-white;
+    padding: 3% 2.5% .25%;
+}
+.card_title {
+    text-align: center;
+    text-overflow: ellipsis;
+    height: 100%;
+}
+.card_title > p {
+    font-size: clamp(10px, 1.5vw, 22.5px);
+    line-height: 1.5;
+    color: #FFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.bd-cyan {
+    border-top: .25vw solid #00d8e6;
+}
+.bd-blue {
+    border-top: .25vw solid #006cff;
+}
+.bd-orange {
+    border-top: .25vw solid #ff8a0c;
+}
+/* ========= END CARD STYLES ========= */
