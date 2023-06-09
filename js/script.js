@@ -3,6 +3,7 @@ const NAV_CONTAINER = document.querySelector(".content-nav-mobile");
 const TOP_SPAN = document.querySelector(".hamburguer span:nth-child(1)")
 const MIDDLE_SPAN = document.querySelector(".hamburguer span:nth-child(2)")
 const BOTTOM_SPAN = document.querySelector(".hamburguer span:nth-child(3)")
+const CARD_CAROUSEL = document.querySelector(".second_content>.row");
 
 HAMBURGUER.onclick = () => {
     const IS_TOGGLED = NAV_CONTAINER.classList.toggle("active");
@@ -18,3 +19,11 @@ HAMBURGUER.onclick = () => {
         NAV_CONTAINER.style.animation = "showNav .5s ease forwards";
     }
 }
+
+window.addEventListener("resize", () => {
+    if(window.innerWidth < 1120){
+        const scrollWidth = CARD_CAROUSEL.scrollWidth
+        const widthContainer = CARD_CAROUSEL.offsetWidth
+        CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
+    }
+})
