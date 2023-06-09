@@ -45,6 +45,9 @@ footer {
                     gradientUpFirst 5s ease infinite;
                 }
             }
+            p {
+                padding: 0 .5rem;
+            }
         }
         .second-content-footer {
             width: calc(100% / 3);
@@ -112,6 +115,9 @@ footer {
                 }
             }
         }
+    }
+    p {
+        padding: .5rem;
     }
 }
 

@@ -26,6 +26,7 @@ body, html {
 
 hr {
   background-color: #808080;
+  margin: 0.5rem 0;
 }
 
 P {
@@ -477,6 +478,9 @@ footer .main-footer .first-content-footer h2 span {
   padding-left: 5px;
   animation: gradientDownFirst 5s ease infinite, gradientUpFirst 5s ease infinite;
 }
+footer .main-footer .first-content-footer p {
+  padding: 0 0.5rem;
+}
 footer .main-footer .second-content-footer {
   width: 33.3333333333%;
   border-left: #5a5a5a solid 1px;
@@ -536,6 +540,9 @@ footer .main-footer .third-content-footer .nav_footer a {
 footer .main-footer .third-content-footer .nav_footer a:hover {
   color: #ffd900;
   transition: 0.5s;
+}
+footer p {
+  padding: 0.5rem;
 }
 
 /* ANIMATION FIRST CHILD */
