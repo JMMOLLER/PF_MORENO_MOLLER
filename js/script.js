@@ -27,3 +27,8 @@ window.addEventListener("resize", () => {
         CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
     }
 })
+
+function customScroll(el, event){
+    const id = el.href.substr(el.href.indexOf("#") + 1);
+    event.preventDefault();document.getElementById(id).scrollIntoView({behavior:'smooth'})
+}

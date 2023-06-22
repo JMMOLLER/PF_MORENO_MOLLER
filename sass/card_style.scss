@@ -1,5 +1,4 @@
 /* ========= CARD STYLES ========= */
-$color-white: #ffffff;
 .card-link {
     display: block;
     height: 100%;
@@ -33,7 +32,6 @@ $color-white: #ffffff;
 .card_title > p {
     font-size: clamp(10px, 1.5vw, 22.5px);
     line-height: 1.5;
-    color: #FFF;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

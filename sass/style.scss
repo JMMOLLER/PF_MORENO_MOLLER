@@ -1,3 +1,4 @@
+/* IMPORTACION FUENTE LOCAL */
 @font-face {
     font-family: "BourgeoisW00-Medium";
     src: url("../assets/fonts/Bourgeois\ W00\ Medium.woff") format("woff");
@@ -66,5 +67,7 @@ video {
 @import "card_style";
 
 @import "index_style";
+
+@import "season_style";
 
 @import "news_style";

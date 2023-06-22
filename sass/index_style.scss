@@ -81,9 +81,9 @@
                         background: url('../assets/img/Button.webp') no-repeat; 
                         background-size: contain;
                         p {
-                            color: #ffffff;
                             font-family: "BourgeoisW00-ultra", "Arial Regular", Arial, sans-serif;
                             font-size: calc(100% + 1vw);
+                            color: $color-white;
                         }
                     }
                     .btn_more_news:focus {
