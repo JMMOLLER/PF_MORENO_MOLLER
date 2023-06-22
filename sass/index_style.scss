@@ -77,13 +77,14 @@
                         width: 100%;
                         height: 100%;
                         border: 0;
-                        font-family: "Bourgeois","Arial Regular",Arial,sans-serif;
-                        font-weight: 600;
-                        color: #fff;
                         text-transform: uppercase;
-                        font-size: calc(100% + 1vw);
                         background: url('../assets/img/Button.webp') no-repeat; 
                         background-size: contain;
+                        p {
+                            color: #ffffff;
+                            font-family: "BourgeoisW00-ultra", "Arial Regular", Arial, sans-serif;
+                            font-size: calc(100% + 1vw);
+                        }
                     }
                     .btn_more_news:focus {
                         outline: none;
