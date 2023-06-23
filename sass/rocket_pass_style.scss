@@ -1,0 +1,153 @@
+main {
+    .rp_section1 {
+        margin-bottom: -6px;
+        margin-left: -1px;
+        /*
+        * Establecí las 2 propiedades de arriba porque en mi pantalla
+        * se veía un borde blanco en la parte inferior y en la izquierda
+        * del video.
+        */
+        position: relative;
+        overflow: hidden;
+
+        .logo_rocket_pass {
+            width: calc(100% - 50vw);
+            min-width: 300px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            z-index: 0;
+        }
+        .arrow_down_button {
+            width: calc(56% - 50vw);
+            min-width: 70px;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            z-index: 0;
+            
+            &:hover {
+                cursor: pointer;
+                transition-duration: .3s;
+                transform: translate(-50%, -70%) scale(1.2);
+            }
+
+            &:not(:hover) {
+                transition-duration: .3s;
+            }
+        }
+    }
+
+    .rp_section2 {
+        background: url('../assets/img/bg_rocket_pass.png') no-repeat center center;
+        background-size: cover;
+
+        .header_title {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 5%;
+
+            h1, p {
+                color: $color-white;
+                font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+                font-weight: bolder;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+            }
+            p {
+                font-size: calc(1rem + 0.1vw);
+            }
+        }
+        .cards_container {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+
+            .card{
+                max-width: 666px;
+                padding: 0 5%;
+                margin-bottom: 2rem;
+                background-color: transparent;
+
+                img {
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+                
+                .card_content {
+                    height: auto;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+
+                    .card_title {
+
+                        p {
+                            font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+                            font-size: calc(1rem + 0.1vw);
+                            padding: 0 1rem;
+                            white-space: unset;
+
+                            @media screen and (max-width: 700px) {
+                                & {
+                                    font-size: calc(.8rem + 0.1vw);
+                                }
+                            }
+                            @media screen and (max-width: 500px) {
+                                & {
+                                    font-size: calc(.5rem + 0.1vw);
+                                }
+                            }
+                        }
+
+                        h2 {
+                            font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+                            font-size: calc(1.5rem + 0.1vw);
+                            white-space: unset;
+                            text-transform: uppercase;
+                            @media screen and (max-width: 700px) {
+                                & {
+                                    font-size: calc(1.3rem + 0.1vw);
+                                }
+                            }
+                            @media screen and (max-width: 500px) {
+                                & {
+                                    font-size: calc(1rem + 0.1vw);
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                @media screen and (max-width: 500px) {
+                    & {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .footer_Section2 {
+            max-width: 1000px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 3%;
+            padding-bottom: 4%;
+
+            p {
+                color: $color-white;
+                font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+                font-weight: bolder;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}

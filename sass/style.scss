@@ -7,6 +7,10 @@
     font-family: "BourgeoisW00-Ultra";
     src: url("../assets/fonts/Bourgeois\ W00\ Ultra.woff") format("woff");
 }
+@font-face {
+    font-family: "Geom Graphic W03 Regular";
+    src: url("../assets/fonts/Geom\ Graphic\ W03\ Regular.woff") format("woff");
+}
 :root {
     color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
 }
@@ -54,8 +58,15 @@ P {
     justify-content: center;
 }
 video {
+    position: relative;
     width: 100%;
-    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (max-width: 900px) {
+        & {
+            width: 900px;
+        }
+    }
 }
 
 /*=============== END GLOBAL STYLES ===============*/
@@ -71,3 +82,5 @@ video {
 @import "season_style";
 
 @import "news_style";
+
+@import "rocket_pass_style";

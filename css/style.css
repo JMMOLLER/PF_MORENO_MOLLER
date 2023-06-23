@@ -8,6 +8,10 @@
   font-family: "BourgeoisW00-Ultra";
   src: url("../assets/fonts/Bourgeois W00 Ultra.woff") format("woff");
 }
+@font-face {
+  font-family: "Geom Graphic W03 Regular";
+  src: url("../assets/fonts/Geom Graphic W03 Regular.woff") format("woff");
+}
 :root {
   color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
 }
@@ -56,8 +60,15 @@ P {
 }
 
 video {
+  position: relative;
   width: 100%;
-  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 900px) {
+  video {
+    width: 900px;
+  }
 }
 
 /*=============== END GLOBAL STYLES ===============*/
@@ -832,17 +843,6 @@ main .season_section1 h1 {
   transform: skew(-20deg);
   z-index: 1;
 }
-main .season_section1 video {
-  position: relative;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media screen and (max-width: 900px) {
-  main .season_section1 video {
-    width: 900px;
-  }
-}
 main .season_section1 .season_img {
   width: calc(100% - 50vw);
   min-width: 300px;
@@ -980,5 +980,138 @@ main .season_section2 .button_container > a .btn_more_news:not(:hover) {
 }
 
 /* ========= END NEWS ========= */
+main .rp_section1 {
+  margin-bottom: -6px;
+  margin-left: -1px;
+  /*
+  * Establecí las 2 propiedades de arriba porque en mi pantalla
+  * se veía un borde blanco en la parte inferior y en la izquierda
+  * del video.
+  */
+  position: relative;
+  overflow: hidden;
+}
+main .rp_section1 .logo_rocket_pass {
+  width: calc(100% - 50vw);
+  min-width: 300px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 0;
+}
+main .rp_section1 .arrow_down_button {
+  width: calc(56% - 50vw);
+  min-width: 70px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  z-index: 0;
+}
+main .rp_section1 .arrow_down_button:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transform: translate(-50%, -70%) scale(1.2);
+}
+main .rp_section1 .arrow_down_button:not(:hover) {
+  transition-duration: 0.3s;
+}
+main .rp_section2 {
+  background: url("../assets/img/bg_rocket_pass.png") no-repeat center center;
+  background-size: cover;
+}
+main .rp_section2 .header_title {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+main .rp_section2 .header_title h1, main .rp_section2 .header_title p {
+  color: #ffffff;
+  font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+main .rp_section2 .header_title p {
+  font-size: calc(1rem + 0.1vw);
+}
+main .rp_section2 .cards_container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+main .rp_section2 .cards_container .card {
+  max-width: 666px;
+  padding: 0 5%;
+  margin-bottom: 2rem;
+  background-color: transparent;
+}
+main .rp_section2 .cards_container .card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+main .rp_section2 .cards_container .card .card_content {
+  height: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+main .rp_section2 .cards_container .card .card_content .card_title p {
+  font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+  font-size: calc(1rem + 0.1vw);
+  padding: 0 1rem;
+  white-space: unset;
+}
+@media screen and (max-width: 700px) {
+  main .rp_section2 .cards_container .card .card_content .card_title p {
+    font-size: calc(0.8rem + 0.1vw);
+  }
+}
+@media screen and (max-width: 500px) {
+  main .rp_section2 .cards_container .card .card_content .card_title p {
+    font-size: calc(0.5rem + 0.1vw);
+  }
+}
+main .rp_section2 .cards_container .card .card_content .card_title h2 {
+  font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+  font-size: calc(1.5rem + 0.1vw);
+  white-space: unset;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 700px) {
+  main .rp_section2 .cards_container .card .card_content .card_title h2 {
+    font-size: calc(1.3rem + 0.1vw);
+  }
+}
+@media screen and (max-width: 500px) {
+  main .rp_section2 .cards_container .card .card_content .card_title h2 {
+    font-size: calc(1rem + 0.1vw);
+  }
+}
+@media screen and (max-width: 500px) {
+  main .rp_section2 .cards_container .card {
+    padding: 0;
+  }
+}
+main .rp_section2 .footer_Section2 {
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3%;
+  padding-bottom: 4%;
+}
+main .rp_section2 .footer_Section2 p {
+  color: #ffffff;
+  font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
 
 /*# sourceMappingURL=style.css.map */

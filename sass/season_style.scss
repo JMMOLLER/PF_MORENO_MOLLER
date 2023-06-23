@@ -20,19 +20,6 @@ main {
             transform: skew(-20deg);
             z-index: 1;
         }
-
-        video {
-            position: relative;
-            width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            @media screen and (max-width: 900px) {
-                & {
-                    width: 900px;
-                }
-            }
-        }
-            
         .season_img {
             width: calc(100% - 50vw);
             min-width: 300px;
@@ -42,7 +29,6 @@ main {
             transform: translate(-50%, -25%);
             z-index: 0;
         }
-
         .play_button {
             width: calc(56% - 50vw);
             min-width: 70px;
@@ -60,7 +46,6 @@ main {
                 transition-duration: .3s;
             }
         }
-
         .down_button {
             width: calc(56% - 50vw);
             min-width: 50px;
@@ -71,7 +56,6 @@ main {
             transform: translate(-50%, -75%);
             z-index: 0;
         }
-
         @media screen and (max-width: 900px) {
             & {
                 max-height: 506.25px; /* agrego esta propiedad porque veo que se excede 6px más de lo necesario */
