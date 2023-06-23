@@ -1257,6 +1257,9 @@ main .dd_section2 .content_right div p {
     margin-bottom: 10%;
     max-width: unset;
   }
+  main .dd_section2 .content_left p {
+    line-height: 1.5rem;
+  }
 }
 @media screen and (max-width: 369px) {
   main .dd_section2 .content_left p {
