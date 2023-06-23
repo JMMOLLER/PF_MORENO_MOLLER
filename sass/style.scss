@@ -1,4 +1,4 @@
-/* IMPORTACION FUENTE LOCAL */
+/*================== IMPORT LOCAL FONT ================*/
 @font-face {
     font-family: "BourgeoisW00-Medium";
     src: url("../assets/fonts/Bourgeois\ W00\ Medium.woff") format("woff");
@@ -11,9 +11,48 @@
     font-family: "Geom Graphic W03 Regular";
     src: url("../assets/fonts/Geom\ Graphic\ W03\ Regular.woff") format("woff");
 }
+/*================== END IMPORT LOCAL FONT ================*/
+
 :root {
     color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
 }
+
+/*================== MIXIN ================*/
+@mixin hero_img {
+    width: calc(100% - 50vw);
+    min-width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+@mixin play_button {
+    width: calc(56% - 50vw);
+    min-width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+        cursor: pointer;
+        transition-duration: .3s;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    &:not(:hover) {
+        transition-duration: .3s;
+    }
+}
+@mixin arrow_bottom {
+    width: calc(56% - 50vw);
+    min-width: 50px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-55%, 20%);
+}
+/*================== END MIXIN ================*/
+
 /*================== VARIABLES ================*/
 $color-header: #000b28;
 $border-orange: 3px solid #faa41a;
@@ -84,3 +123,5 @@ video {
 @import "news_style";
 
 @import "rocket_pass_style";
+
+@import "drive_days_style";

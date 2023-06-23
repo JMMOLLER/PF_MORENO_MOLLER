@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* IMPORTACION FUENTE LOCAL */
+/*================== IMPORT LOCAL FONT ================*/
 @font-face {
   font-family: "BourgeoisW00-Medium";
   src: url("../assets/fonts/Bourgeois W00 Medium.woff") format("woff");
@@ -12,10 +12,13 @@
   font-family: "Geom Graphic W03 Regular";
   src: url("../assets/fonts/Geom Graphic W03 Regular.woff") format("woff");
 }
+/*================== END IMPORT LOCAL FONT ================*/
 :root {
   color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
 }
 
+/*================== MIXIN ================*/
+/*================== END MIXIN ================*/
 /*================== VARIABLES ================*/
 /*=============== END VARIABLES ===============*/
 /*=============== GLOBAL STYLES ===============*/
@@ -847,19 +850,17 @@ main .season_section1 .season_img {
   width: calc(100% - 50vw);
   min-width: 300px;
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -25%);
-  z-index: 0;
+  transform: translate(-50%, -20%);
 }
 main .season_section1 .play_button {
   width: calc(56% - 50vw);
   min-width: 70px;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
-  z-index: 0;
+  transform: translate(-50%, -50%);
 }
 main .season_section1 .play_button:hover {
   cursor: pointer;
@@ -874,10 +875,9 @@ main .season_section1 .down_button {
   min-width: 50px;
   position: absolute;
   cursor: pointer;
-  top: 75%;
+  bottom: 25%;
   left: 50%;
-  transform: translate(-50%, -75%);
-  z-index: 0;
+  transform: translate(-55%, 20%);
 }
 @media screen and (max-width: 900px) {
   main .season_section1 {
@@ -995,24 +995,25 @@ main .rp_section1 .logo_rocket_pass {
   width: calc(100% - 50vw);
   min-width: 300px;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
+  transform: translate(-50%, -20%);
+  top: 30%;
   transform: translate(-50%, -30%);
-  z-index: 0;
 }
 main .rp_section1 .arrow_down_button {
   width: calc(56% - 50vw);
-  min-width: 70px;
+  min-width: 50px;
   position: absolute;
-  top: 70%;
+  cursor: pointer;
+  bottom: 25%;
   left: 50%;
-  transform: translate(-50%, -70%);
-  z-index: 0;
+  transform: translate(-55%, 20%);
 }
 main .rp_section1 .arrow_down_button:hover {
   cursor: pointer;
   transition-duration: 0.3s;
-  transform: translate(-50%, -70%) scale(1.2);
+  transform: translate(-55%, 20%) scale(1.1);
 }
 main .rp_section1 .arrow_down_button:not(:hover) {
   transition-duration: 0.3s;
@@ -1112,6 +1113,43 @@ main .rp_section2 .footer_Section2 p {
   text-transform: uppercase;
   margin-bottom: 0;
   line-height: 1.5rem;
+}
+
+main .dd_section1 {
+  position: relative;
+  margin-bottom: -6px;
+}
+main .dd_section1 h1 {
+  color: #ffffff;
+  font-family: "BourgeoisW00-Ultra", "Arial Regular", Arial, sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 1rem;
+  font-size: calc(100% + 1vw);
+  transform: skew(-20deg);
+  z-index: 1;
+}
+main .dd_section1 video {
+  margin-left: -1px;
+}
+main .dd_section1 img {
+  position: absolute;
+  left: 0;
+}
+main .dd_section1 .drive_days_logo {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+main .dd_section1 .play_button {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .dd_section1 .arrow_bottom {
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-55%, 25%);
 }
 
 /*# sourceMappingURL=style.css.map */
