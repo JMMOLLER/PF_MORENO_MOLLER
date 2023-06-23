@@ -8,6 +8,10 @@
     src: url("../assets/fonts/Bourgeois\ W00\ Ultra.woff") format("woff");
 }
 @font-face {
+    font-family: "BourgeoisW00-UltraAlt";
+    src: url("../assets/fonts/Bourgeois\ W00\ Ultra\ Alt.woff") format("woff");
+}
+@font-face {
     font-family: "Geom Graphic W03 Regular";
     src: url("../assets/fonts/Geom\ Graphic\ W03\ Regular.woff") format("woff");
 }
@@ -69,12 +73,11 @@ $color-white: #ffffff;
 body,
 html {
     min-width: 300px;
-    /* 
-    *  YA ME CANSÉ DE DARLE VUELTAS, 
-    *  NO SÉ PORQUE EL BODY NO ALCANZA EL 100%
-    *  DEL PADRE HTML.
-    */
     min-height: 100vh;
+}
+body {
+    // Tenia el problema de que el body tenia 8px de más, no se porque pero esto lo soluciona
+    margin-bottom: -8px; 
 }
 hr {
     background-color: #808080;

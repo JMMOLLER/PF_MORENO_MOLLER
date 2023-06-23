@@ -1,0 +1,141 @@
+main {
+    .dd_section1{
+        position: relative;
+        margin-bottom: -6px;
+        margin-left: -1px;
+        overflow: hidden;
+
+        h1 {
+            color: $color-white;
+            font-family: "BourgeoisW00-Ultra", "Arial Regular", Arial, sans-serif;
+            position: absolute;
+            top: 10px;
+            right: 1rem;
+            font-size: calc(100% + 1vw);
+            transform: skew(-20deg);
+            z-index: 1;
+        }
+
+        .drive_days_logo {
+            @include hero_img;
+        }
+
+        .play_button {
+            @include play_button;
+            top: 55%;
+            transform: translate(-50%, -55%);
+        }
+
+        .arrow_bottom {
+            @include arrow_bottom;
+        }
+    }
+
+    .dd_section2 {
+        text-transform: uppercase;
+        background-image: url("../assets/img/bg_info_drive_days.png");
+        background-position: center;
+        color: $color-white;
+        min-height: 706px;
+        display: flex;
+        overflow: hidden;
+
+        .bg_drive_days_mobile {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        .content_left {
+            max-width: 44%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3%;
+            margin-right: .5%;
+
+            h2 {
+                font-family: "BourgeoisW00-UltraAlt", "Arial Regular", Arial, sans-serif;
+                font-weight: bold;
+                font-size: calc(100% + 2vw);
+                margin-bottom: 2.5rem;
+                transform: skew(-20deg);
+            }
+            p {
+                font-family: "BourgeoisW00-Medium", "Arial Regular", Arial, sans-serif;
+                font-weight: bold;
+                font-size: calc(100% + 0.4vw);
+                line-height: 2rem;
+            }
+            button {
+                height: 65px;
+                width: 255px;
+                background-image: url(../assets/img/button_drive_days.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: 0;
+                margin: 10% auto 0 auto;
+                background-color: transparent;
+                color: $color-white;
+                cursor: pointer;
+
+                &:focus {
+                    outline: none;
+                }
+
+                p {
+                    line-height: 4rem;
+                }
+            }
+        }
+
+        .content_right {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            div {
+                img {
+                    width: calc(100% - 1vw);
+                }
+                p {
+                    font-family: "BourgeoisW00-Medium", "Arial Regular", Arial, sans-serif;
+                    font-weight: bold;
+                    font-size: calc(100% + 0.4vw);
+                    line-height: 2rem;
+                    transform: skew(-15deg);
+                    text-align: center;
+                    text-shadow: 1px 1px 2px #ffffff;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1119px) {
+            & {
+                background-image: none;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .bg_drive_days_mobile {
+                display: block;
+            }
+            .content_left {
+                margin-top: 1%;
+                margin-bottom: 10%;
+                max-width: unset;
+            }
+        }
+
+        @media screen and (max-width: 369px) {
+            .content_left {
+                p {
+                    font-size: calc(100% - 0.3vw);
+                }
+            }
+        }
+    }
+}

@@ -9,6 +9,10 @@
   src: url("../assets/fonts/Bourgeois W00 Ultra.woff") format("woff");
 }
 @font-face {
+  font-family: "BourgeoisW00-UltraAlt";
+  src: url("../assets/fonts/Bourgeois W00 Ultra Alt.woff") format("woff");
+}
+@font-face {
   font-family: "Geom Graphic W03 Regular";
   src: url("../assets/fonts/Geom Graphic W03 Regular.woff") format("woff");
 }
@@ -31,12 +35,11 @@
 body,
 html {
   min-width: 300px;
-  /* 
-  *  YA ME CANSÉ DE DARLE VUELTAS, 
-  *  NO SÉ PORQUE EL BODY NO ALCANZA EL 100%
-  *  DEL PADRE HTML.
-  */
   min-height: 100vh;
+}
+
+body {
+  margin-bottom: -8px;
 }
 
 hr {
@@ -1118,6 +1121,8 @@ main .rp_section2 .footer_Section2 p {
 main .dd_section1 {
   position: relative;
   margin-bottom: -6px;
+  margin-left: -1px;
+  overflow: hidden;
 }
 main .dd_section1 h1 {
   color: #ffffff;
@@ -1129,27 +1134,134 @@ main .dd_section1 h1 {
   transform: skew(-20deg);
   z-index: 1;
 }
-main .dd_section1 video {
-  margin-left: -1px;
-}
-main .dd_section1 img {
-  position: absolute;
-  left: 0;
-}
 main .dd_section1 .drive_days_logo {
+  width: calc(100% - 50vw);
+  min-width: 300px;
+  position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
 }
 main .dd_section1 .play_button {
+  width: calc(56% - 50vw);
+  min-width: 70px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: 55%;
+  transform: translate(-50%, -55%);
+}
+main .dd_section1 .play_button:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+main .dd_section1 .play_button:not(:hover) {
+  transition-duration: 0.3s;
 }
 main .dd_section1 .arrow_bottom {
+  width: calc(56% - 50vw);
+  min-width: 50px;
+  position: absolute;
+  cursor: pointer;
   bottom: 25%;
   left: 50%;
-  transform: translate(-55%, 25%);
+  transform: translate(-55%, 20%);
+}
+main .dd_section2 {
+  text-transform: uppercase;
+  background-image: url("../assets/img/bg_info_drive_days.png");
+  background-position: center;
+  color: #ffffff;
+  min-height: 706px;
+  display: flex;
+  overflow: hidden;
+}
+main .dd_section2 .bg_drive_days_mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+main .dd_section2 .content_left {
+  max-width: 44%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3%;
+  margin-right: 0.5%;
+}
+main .dd_section2 .content_left h2 {
+  font-family: "BourgeoisW00-UltraAlt", "Arial Regular", Arial, sans-serif;
+  font-weight: bold;
+  font-size: calc(100% + 2vw);
+  margin-bottom: 2.5rem;
+  transform: skew(-20deg);
+}
+main .dd_section2 .content_left p {
+  font-family: "BourgeoisW00-Medium", "Arial Regular", Arial, sans-serif;
+  font-weight: bold;
+  font-size: calc(100% + 0.4vw);
+  line-height: 2rem;
+}
+main .dd_section2 .content_left button {
+  height: 65px;
+  width: 255px;
+  background-image: url(../assets/img/button_drive_days.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+  margin: 10% auto 0 auto;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+main .dd_section2 .content_left button:focus {
+  outline: none;
+}
+main .dd_section2 .content_left button p {
+  line-height: 4rem;
+}
+main .dd_section2 .content_right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .dd_section2 .content_right div img {
+  width: calc(100% - 1vw);
+}
+main .dd_section2 .content_right div p {
+  font-family: "BourgeoisW00-Medium", "Arial Regular", Arial, sans-serif;
+  font-weight: bold;
+  font-size: calc(100% + 0.4vw);
+  line-height: 2rem;
+  transform: skew(-15deg);
+  text-align: center;
+  text-shadow: 1px 1px 2px #ffffff;
+}
+@media screen and (max-width: 1119px) {
+  main .dd_section2 {
+    background-image: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .dd_section2 .bg_drive_days_mobile {
+    display: block;
+  }
+  main .dd_section2 .content_left {
+    margin-top: 1%;
+    margin-bottom: 10%;
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 369px) {
+  main .dd_section2 .content_left p {
+    font-size: calc(100% - 0.3vw);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
