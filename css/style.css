@@ -812,7 +812,13 @@ footer p {
 }
 /* ========= END INDEX STYLES ========= */
 main .season_section1 {
-  max-height: 1080px; /* agrego esta propiedad porque veo que se excede 6px más de lo necesario */
+  margin-bottom: -6px;
+  margin-left: -1px;
+  /*
+  * Establecí las 2 propiedades de arriba porque en mi pantalla
+  * se veía un borde blanco en la parte inferior y en la izquierda
+  * del video.
+  */
   position: relative;
   overflow: hidden;
 }
@@ -828,8 +834,7 @@ main .season_section1 h1 {
 }
 main .season_section1 video {
   position: relative;
-  width: auto;
-  height: auto;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -883,7 +888,7 @@ main .season_section2 {
   background-image: url(../assets/img/bg_season_section2.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
