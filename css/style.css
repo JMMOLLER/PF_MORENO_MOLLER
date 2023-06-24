@@ -857,7 +857,6 @@ main .season_section1 .season_img {
   left: 50%;
   transform: translate(-50%, -20%);
   opacity: 0;
-  animation: fadeInFromBottm 1.5s 0.5s ease-in-out forwards;
 }
 main .season_section1 .play_button {
   width: calc(56% - 50vw);
@@ -867,7 +866,6 @@ main .season_section1 .play_button {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  animation: fadeIn 1s 2.1s ease-in-out forwards;
 }
 main .season_section1 .play_button:hover {
   cursor: pointer;
@@ -887,7 +885,6 @@ main .season_section1 .down_button {
   transform: translate(-55%, 20%);
   transform: translate(-50%, 25%);
   opacity: 0;
-  animation: fadeIn 1s 2.1s ease-in-out forwards;
 }
 @media screen and (max-width: 900px) {
   main .season_section1 {
@@ -1011,7 +1008,6 @@ main .rp_section1 .logo_rocket_pass {
   opacity: 0;
   top: 30%;
   transform: translate(-50%, -30%);
-  animation: fadeInFromBottm 2s 2.1s ease-in-out forwards;
 }
 main .rp_section1 .arrow_down_button {
   width: calc(56% - 50vw);
@@ -1022,7 +1018,6 @@ main .rp_section1 .arrow_down_button {
   left: 50%;
   transform: translate(-55%, 20%);
   opacity: 0;
-  animation: fadeIn 1.5s 3s ease-in-out forwards;
 }
 main .rp_section1 .arrow_down_button:hover {
   cursor: pointer;
@@ -1203,7 +1198,6 @@ main .dd_section1 .drive_days_logo {
   left: 50%;
   transform: translate(-50%, -20%);
   opacity: 0;
-  animation: fadeInFromBottm 1.5s 3.7s ease-in-out forwards;
 }
 main .dd_section1 .play_button {
   width: calc(56% - 50vw);
@@ -1215,7 +1209,6 @@ main .dd_section1 .play_button {
   top: 55%;
   transform: translate(-50%, -55%);
   opacity: 0;
-  animation: fadeIn 1.5s 4.5s ease-in-out forwards;
 }
 main .dd_section1 .play_button:hover {
   cursor: pointer;
@@ -1234,7 +1227,6 @@ main .dd_section1 .arrow_bottom {
   left: 50%;
   transform: translate(-55%, 20%);
   opacity: 0;
-  animation: fadeIn 1.5s 4.5s ease-in-out forwards;
 }
 main .dd_section2 {
   text-transform: uppercase;

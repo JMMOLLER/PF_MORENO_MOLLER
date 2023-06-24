@@ -19,7 +19,7 @@ main {
         .drive_days_logo {
             @include hero_img;
             opacity: 0;
-            animation: fadeInFromBottm 1.5s 3.7s ease-in-out forwards;
+            // animation: fadeInFromBottm 1.5s 3.7s ease-in-out forwards;
         }
 
         .play_button {
@@ -27,13 +27,13 @@ main {
             top: 55%;
             transform: translate(-50%, -55%);
             opacity: 0;
-            animation: fadeIn 1.5s 4.5s ease-in-out forwards;
+            // animation: fadeIn 1.5s 4.5s ease-in-out forwards;
         }
 
         .arrow_bottom {
             @include arrow_bottom;
             opacity: 0;
-            animation: fadeIn 1.5s 4.5s ease-in-out forwards;
+            // animation: fadeIn 1.5s 4.5s ease-in-out forwards;
         }
     }
 

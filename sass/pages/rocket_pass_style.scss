@@ -15,12 +15,12 @@ main {
             opacity: 0;
             top: 30%;
             transform: translate(-50%, -30%);
-            animation: fadeInFromBottm 2s 2.1s ease-in-out forwards;
+            // animation: fadeInFromBottm 2s 2.1s ease-in-out forwards;
         }
         .arrow_down_button {
             @include arrow_bottom;
             opacity: 0;
-            animation: fadeIn 1.5s 3s ease-in-out forwards;
+            // animation: fadeIn 1.5s 3s ease-in-out forwards;
             
             &:hover {
                 cursor: pointer;

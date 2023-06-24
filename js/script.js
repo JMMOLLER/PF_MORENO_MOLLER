@@ -4,6 +4,10 @@ const TOP_SPAN = document.querySelector(".hamburguer span:nth-child(1)")
 const MIDDLE_SPAN = document.querySelector(".hamburguer span:nth-child(2)")
 const BOTTOM_SPAN = document.querySelector(".hamburguer span:nth-child(3)")
 const CARD_CAROUSEL = document.querySelector(".second_content>.row");
+const VIDEO_SEASON = document.getElementById("video_season");
+const VIDEO_ROCKET_PASS = document.getElementById("rocket_pass_video");
+const VIDEO_DRIVE_DAYS = document.getElementById("drive_days_video");
+
 
 HAMBURGUER.onclick = () => {
     const IS_TOGGLED = NAV_CONTAINER.classList.toggle("active");
@@ -27,6 +31,21 @@ window.addEventListener("resize", () => {
         CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
     }
 })
+
+VIDEO_SEASON?.addEventListener('play', () => {
+    document.querySelector(".season_img").style.animation = "fadeInFromBottm 1.5s .5s ease-in-out forwards";
+    document.querySelectorAll(".play_button")[2].style.animation = "fadeIn 1s 2.1s ease-in-out forwards";
+    document.querySelector(".down_button").style.animation = "fadeIn 1s 2.1s ease-in-out forwards";
+});
+VIDEO_ROCKET_PASS?.addEventListener('play', () => {
+    document.querySelector(".logo_rocket_pass").style.animation = "fadeInFromBottm 2s 2.1s ease-in-out forwards";
+    document.querySelector(".arrow_down_button").style.animation = "fadeIn 1.5s 3s ease-in-out forwards";
+});
+VIDEO_DRIVE_DAYS?.addEventListener('play', () => {
+    document.querySelector(".drive_days_logo").style.animation = "fadeInFromBottm 1.5s 3.6s ease-in-out forwards";
+    document.querySelectorAll(".play_button")[2].style.animation = "fadeIn 1.5s 4.5s ease-in-out forwards";
+    document.querySelector(".arrow_bottom").style.animation = "fadeIn 1.5s 4.5s ease-in-out forwards";
+});
 
 function customScroll(el, event){
     const id = el.href.substr(el.href.indexOf("#") + 1);
