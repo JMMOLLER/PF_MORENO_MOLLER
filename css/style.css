@@ -525,8 +525,8 @@ footer .main-footer .second-content-footer h2 span {
 }
 footer .main-footer .second-content-footer .icons-socials {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 footer .main-footer .second-content-footer .icons-socials .fa {
   font-size: 45px;

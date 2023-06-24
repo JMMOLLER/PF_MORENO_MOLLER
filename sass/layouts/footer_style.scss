@@ -69,8 +69,8 @@ footer {
             }
             .icons-socials {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
+                justify-content: space-around;
                 .fa {
                     font-size: 45px;
                     margin: 5px 0px;
