@@ -1056,14 +1056,47 @@ main .rp_section2 .cards_container .card {
   margin-bottom: 2rem;
   background-color: transparent;
 }
-main .rp_section2 .cards_container .card img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+main .rp_section2 .cards_container .card .img_container {
+  height: 80%;
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+main .rp_section2 .cards_container .card .img_container .label_container {
+  position: absolute;
+  left: 1px;
+}
+main .rp_section2 .cards_container .card .img_container .label_container img {
+  all: unset;
+  width: 100%;
+  height: auto;
+}
+main .rp_section2 .cards_container .card .img_container .label_container p {
+  position: absolute;
+  font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  margin: 0;
+}
+@media screen and (max-width: 1119px) {
+  main .rp_section2 .cards_container .card .img_container .label_container img {
+    width: calc(100% - 5vw);
+  }
+  main .rp_section2 .cards_container .card .img_container .label_container p {
+    font-size: calc(0.7rem + 0.2vw);
+  }
+}
+main .rp_section2 .cards_container .card .img_container .banner_img {
+  width: 100%;
+  height: 100%;
 }
 main .rp_section2 .cards_container .card .card_content {
   height: auto;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 main .rp_section2 .cards_container .card .card_content .card_title p {
   font-family: "Geom Graphic W03 Regular", "Arial Regular", Arial, sans-serif;
