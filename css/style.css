@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
+}
+
 /*================== IMPORT LOCAL FONT ================*/
 @font-face {
   font-family: "BourgeoisW00-Medium";
@@ -17,10 +21,6 @@
   src: url("../assets/fonts/Geom Graphic W03 Regular.woff") format("woff");
 }
 /*================== END IMPORT LOCAL FONT ================*/
-:root {
-  color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
-}
-
 /*================== MIXIN ================*/
 /*================== END MIXIN ================*/
 /*================== VARIABLES ================*/
@@ -856,6 +856,8 @@ main .season_section1 .season_img {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
+  opacity: 0;
+  animation: fadeInFromBottm 1.5s 0.5s ease-in-out forwards;
 }
 main .season_section1 .play_button {
   width: calc(56% - 50vw);
@@ -864,6 +866,8 @@ main .season_section1 .play_button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 1s 2.1s ease-in-out forwards;
 }
 main .season_section1 .play_button:hover {
   cursor: pointer;
@@ -881,6 +885,9 @@ main .season_section1 .down_button {
   bottom: 25%;
   left: 50%;
   transform: translate(-55%, 20%);
+  transform: translate(-50%, 25%);
+  opacity: 0;
+  animation: fadeIn 1s 2.1s ease-in-out forwards;
 }
 @media screen and (max-width: 900px) {
   main .season_section1 {
@@ -1001,8 +1008,10 @@ main .rp_section1 .logo_rocket_pass {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
+  opacity: 0;
   top: 30%;
   transform: translate(-50%, -30%);
+  animation: fadeInFromBottm 2s 2.1s ease-in-out forwards;
 }
 main .rp_section1 .arrow_down_button {
   width: calc(56% - 50vw);
@@ -1012,6 +1021,8 @@ main .rp_section1 .arrow_down_button {
   bottom: 25%;
   left: 50%;
   transform: translate(-55%, 20%);
+  opacity: 0;
+  animation: fadeIn 1.5s 3s ease-in-out forwards;
 }
 main .rp_section1 .arrow_down_button:hover {
   cursor: pointer;
@@ -1020,6 +1031,23 @@ main .rp_section1 .arrow_down_button:hover {
 }
 main .rp_section1 .arrow_down_button:not(:hover) {
   transition-duration: 0.3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInFromBottm {
+  0% {
+    top: 37%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 main .rp_section2 {
   background: url("../assets/img/bg_rocket_pass.png") no-repeat center center;
@@ -1174,6 +1202,8 @@ main .dd_section1 .drive_days_logo {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
+  opacity: 0;
+  animation: fadeInFromBottm 1.5s 3.7s ease-in-out forwards;
 }
 main .dd_section1 .play_button {
   width: calc(56% - 50vw);
@@ -1184,6 +1214,8 @@ main .dd_section1 .play_button {
   transform: translate(-50%, -50%);
   top: 55%;
   transform: translate(-50%, -55%);
+  opacity: 0;
+  animation: fadeIn 1.5s 4.5s ease-in-out forwards;
 }
 main .dd_section1 .play_button:hover {
   cursor: pointer;
@@ -1201,6 +1233,8 @@ main .dd_section1 .arrow_bottom {
   bottom: 25%;
   left: 50%;
   transform: translate(-55%, 20%);
+  opacity: 0;
+  animation: fadeIn 1.5s 4.5s ease-in-out forwards;
 }
 main .dd_section2 {
   text-transform: uppercase;

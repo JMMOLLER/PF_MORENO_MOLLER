@@ -1,130 +1,27 @@
-/*================== IMPORT LOCAL FONT ================*/
-@font-face {
-    font-family: "BourgeoisW00-Medium";
-    src: url("../assets/fonts/Bourgeois\ W00\ Medium.woff") format("woff");
-}
-@font-face {
-    font-family: "BourgeoisW00-Ultra";
-    src: url("../assets/fonts/Bourgeois\ W00\ Ultra.woff") format("woff");
-}
-@font-face {
-    font-family: "BourgeoisW00-UltraAlt";
-    src: url("../assets/fonts/Bourgeois\ W00\ Ultra\ Alt.woff") format("woff");
-}
-@font-face {
-    font-family: "Geom Graphic W03 Regular";
-    src: url("../assets/fonts/Geom\ Graphic\ W03\ Regular.woff") format("woff");
-}
-/*================== END IMPORT LOCAL FONT ================*/
-
 :root {
     color-scheme: light; /* Evita que el modo oscuro del navegador cambie los colores con el modo oscuro */
 }
 
-/*================== MIXIN ================*/
-@mixin hero_img {
-    width: calc(100% - 50vw);
-    min-width: 300px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-}
-@mixin play_button {
-    width: calc(56% - 50vw);
-    min-width: 70px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    &:hover {
-        cursor: pointer;
-        transition-duration: .3s;
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-    &:not(:hover) {
-        transition-duration: .3s;
-    }
-}
-@mixin arrow_bottom {
-    width: calc(56% - 50vw);
-    min-width: 50px;
-    position: absolute;
-    cursor: pointer;
-    bottom: 25%;
-    left: 50%;
-    transform: translate(-55%, 20%);
-}
-/*================== END MIXIN ================*/
+@import "./global/font_declarations";
 
-/*================== VARIABLES ================*/
-$color-header: #000b28;
-$border-orange: 3px solid #faa41a;
-$border-cyan: 3px solid #00d8e6;
-$color-white: #ffffff;
-/*=============== END VARIABLES ===============*/
+@import "./global/mixin_declarations";
 
-/*=============== GLOBAL STYLES ===============*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body,
-html {
-    min-width: 300px;
-    min-height: 100vh;
-}
-body {
-    // Tenia el problema de que el body tenia 8px de más, no se porque pero esto lo soluciona
-    margin-bottom: -8px; 
-}
-hr {
-    background-color: #808080;
-    margin: 0.5rem 0;
-}
-P {
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    font-family: "BourgeoisW00-Medium", "Arial Regular", Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    color: inherit;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    line-height: 1;
-}
-.row {
-    margin: auto;
-    justify-content: center;
-}
-video {
-    position: relative;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    @media screen and (max-width: 900px) {
-        & {
-            width: 900px;
-        }
-    }
-}
+@import "./global/variable_declarations";
 
-/*=============== END GLOBAL STYLES ===============*/
+@import "./global/reset_style";
 
-@import "header_style";
+@import "./layouts/header_style";
 
-@import "footer_style";
+@import "./layouts/footer_style";
 
-@import "card_style";
+@import "./layouts/card_style";
 
-@import "index_style";
+@import "./pages/index_style";
 
-@import "season_style";
+@import "./pages/season_style";
 
-@import "news_style";
+@import "./pages/news_style";
 
-@import "rocket_pass_style";
+@import "./pages/rocket_pass_style";
 
-@import "drive_days_style";
+@import "./pages/drive_days_style";

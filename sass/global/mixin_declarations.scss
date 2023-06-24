@@ -1,0 +1,35 @@
+/*================== MIXIN ================*/
+@mixin hero_img {
+    width: calc(100% - 50vw);
+    min-width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+@mixin play_button {
+    width: calc(56% - 50vw);
+    min-width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+        cursor: pointer;
+        transition-duration: .3s;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    &:not(:hover) {
+        transition-duration: .3s;
+    }
+}
+@mixin arrow_bottom {
+    width: calc(56% - 50vw);
+    min-width: 50px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-55%, 20%);
+}
+/*================== END MIXIN ================*/

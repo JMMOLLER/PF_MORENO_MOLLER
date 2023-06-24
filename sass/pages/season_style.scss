@@ -22,12 +22,19 @@ main {
         }
         .season_img {
             @include hero_img;
+            opacity: 0;
+            animation: fadeInFromBottm 1.5s .5s ease-in-out forwards;
         }
         .play_button {
             @include play_button;
+            opacity: 0;
+            animation: fadeIn 1s 2.1s ease-in-out forwards;
         }
         .down_button {
             @include arrow_bottom;
+            transform: translate(-50%, 25%);
+            opacity: 0;
+            animation: fadeIn 1s 2.1s ease-in-out forwards;
         }
         @media screen and (max-width: 900px) {
             & {
