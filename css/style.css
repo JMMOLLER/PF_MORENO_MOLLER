@@ -829,8 +829,8 @@ footer p {
 }
 /* ========= END INDEX STYLES ========= */
 main .season_section1 {
-  margin-bottom: -6px;
   margin-left: -1px;
+  margin-bottom: -6px;
   /*
   * Establecí las 2 propiedades de arriba porque en mi pantalla
   * se veía un borde blanco en la parte inferior y en la izquierda
@@ -988,8 +988,8 @@ main .season_section2 .button_container > a .btn_more_news:not(:hover) {
 
 /* ========= END NEWS ========= */
 main .rp_section1 {
-  margin-bottom: -6px;
   margin-left: -1px;
+  margin-bottom: -7px;
   /*
   * Establecí las 2 propiedades de arriba porque en mi pantalla
   * se veía un borde blanco en la parte inferior y en la izquierda
@@ -1176,8 +1176,8 @@ main .rp_section2 .footer_Section2 p {
 
 main .dd_section1 {
   position: relative;
-  margin-bottom: -6px;
   margin-left: -1px;
+  margin-bottom: -7px;
   overflow: hidden;
 }
 main .dd_section1 h1 {
