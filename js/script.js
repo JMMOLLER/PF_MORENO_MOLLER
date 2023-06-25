@@ -25,13 +25,7 @@ HAMBURGUER.onclick = () => {
     }
 }
 
-window.addEventListener("resize", () => {
-    if(URL_PATH.pathname === "/index.html" && window.innerWidth < 1120){
-        const scrollWidth = CARD_CAROUSEL?.scrollWidth
-        const widthContainer = CARD_CAROUSEL?.offsetWidth
-        CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
-    }
-})
+window.addEventListener("resize", centerCarousel);
 
 VIDEO_SEASON?.addEventListener('play', () => {
     document.querySelector(".season_img").style.animation = "fadeInFromBottm 1.5s .5s ease-in-out forwards";
@@ -51,4 +45,16 @@ VIDEO_DRIVE_DAYS?.addEventListener('play', () => {
 function customScroll(el, event){
     const id = el.href.substr(el.href.indexOf("#") + 1);
     event.preventDefault();document.getElementById(id).scrollIntoView({behavior:'smooth'})
+}
+
+function centerCarousel(){
+    const scrollWidth = CARD_CAROUSEL?.scrollWidth
+    const widthContainer = CARD_CAROUSEL?.offsetWidth
+    CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
+}
+
+window.onload = () => {
+    if(URL_PATH.pathname === "/index.html" && window.innerWidth < 1120){
+        centerCarousel();
+    }
 }
