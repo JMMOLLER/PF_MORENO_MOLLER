@@ -132,8 +132,9 @@ main {
                 display: block;
             }
             .content_left {
+                justify-content: flex-start;
                 margin-top: 1%;
-                margin-bottom: 10%;
+                margin-bottom: 5%;
                 max-width: unset;
 
                 p {

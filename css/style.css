@@ -1314,8 +1314,9 @@ main .dd_section2 .content_right div p {
     display: block;
   }
   main .dd_section2 .content_left {
+    justify-content: flex-start;
     margin-top: 1%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     max-width: unset;
   }
   main .dd_section2 .content_left p {
