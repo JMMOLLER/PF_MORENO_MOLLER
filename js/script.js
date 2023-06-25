@@ -1,3 +1,4 @@
+const URL_PATH = new URL(window.location.href);
 const HAMBURGUER = document.getElementById("hamburguer");
 const NAV_CONTAINER = document.querySelector(".content-nav-mobile");
 const TOP_SPAN = document.querySelector(".hamburguer span:nth-child(1)")
@@ -25,9 +26,9 @@ HAMBURGUER.onclick = () => {
 }
 
 window.addEventListener("resize", () => {
-    if(window.innerWidth < 1120){
-        const scrollWidth = CARD_CAROUSEL.scrollWidth
-        const widthContainer = CARD_CAROUSEL.offsetWidth
+    if(URL_PATH.pathname === "/index.html" && window.innerWidth < 1120){
+        const scrollWidth = CARD_CAROUSEL?.scrollWidth
+        const widthContainer = CARD_CAROUSEL?.offsetWidth
         CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
     }
 })
