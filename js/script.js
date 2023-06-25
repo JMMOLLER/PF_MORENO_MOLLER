@@ -48,13 +48,11 @@ function customScroll(el, event){
 }
 
 function centerCarousel(){
-    const scrollWidth = CARD_CAROUSEL?.scrollWidth
-    const widthContainer = CARD_CAROUSEL?.offsetWidth
-    CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
-}
-
-window.onload = () => {
     if(URL_PATH.pathname === "/index.html" && window.innerWidth < 1120){
-        centerCarousel();
+        const scrollWidth = CARD_CAROUSEL?.scrollWidth
+        const widthContainer = CARD_CAROUSEL?.offsetWidth
+        CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
     }
 }
+
+window.onload = centerCarousel;
