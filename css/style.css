@@ -1305,6 +1305,7 @@ main .dd_section2 .content_right div p {
 }
 @media screen and (max-width: 1119px) {
   main .dd_section2 {
+    position: relative;
     background-image: none;
     flex-wrap: wrap;
     justify-content: center;

@@ -123,6 +123,7 @@ main {
 
         @media screen and (max-width: 1119px) {
             & {
+                position: relative;
                 background-image: none;
                 flex-wrap: wrap;
                 justify-content: center;
