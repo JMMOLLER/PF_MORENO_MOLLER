@@ -48,7 +48,7 @@ function customScroll(el, event){
 }
 
 function centerCarousel(){
-    if(URL_PATH.pathname === "/index.html" && window.innerWidth < 1120){
+    if((URL_PATH.pathname === "/index.html" || URL_PATH.pathname === "/") && window.innerWidth < 1120){
         const scrollWidth = CARD_CAROUSEL?.scrollWidth
         const widthContainer = CARD_CAROUSEL?.offsetWidth
         CARD_CAROUSEL.scrollLeft = (scrollWidth - widthContainer) / 2;
